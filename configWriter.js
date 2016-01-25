@@ -4,8 +4,12 @@ var options = {
 	database: {
 		host: 'localhost',
 		username: 'root',
-		password: '',
+		password: 'root',
 		dbname: 'criticalmass'
+	},
+	criticalmaps: {
+		baseUrl: 'http://api.criticalmaps.net/get',
+		interval: 1000
 	},
 	glympse: {
 		apiKey: '',
@@ -40,7 +44,7 @@ var options = {
 
 var data = JSON.stringify(options);
 
-fs.writeFile('./config.json', data, function (err) {
+fs.writeFile('./config.js', data, function (err) {
   if (err) {
     console.log('There has been an error saving your configuration data.');
     console.log(err.message);
