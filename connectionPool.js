@@ -1,7 +1,7 @@
 var mysql = require('mysql');
 var fs = require('fs');
 
-var configFile = fs.readFileSync('./config.json');
+var configFile = fs.readFileSync('/var/www/api-commons/config.json');
 var config;
 
 try
